@@ -17,7 +17,7 @@
         background-color: #f8f9fa;
         font-family: 'Chiron Sung HK', serif;
         padding: 20px;
-        margin: 0;
+        margin: 10px;
       }
 
       /* 16:9 容器 */
@@ -77,24 +77,36 @@
       .stand-info {
         position: absolute;
         top: 7vh;
-        left: 5vw;
+        left: 5%;
         text-align: left;
         z-index: 10;
-        text-shadow: 0px 0px 7px rgba(255, 255, 255, 1); /* 增加可讀性 */
+        text-shadow: 0px 0px 7px rgba(255, 255, 255, 1),1.5px 2px 0 #222; /* 增加可讀性 */
       }
       .sub-text {
         font-size: 2vw;
         font-weight: 900;
         letter-spacing: 2px;
-        color: #222;
+        color: #fff;
         text-transform: uppercase;
         margin-top: -2vh;
       }
-      #display-stand-name {
-        font-size: 6vw;
-        color: #000;
+      #display-stand-name ,#display-name{
+        font-size: 450%;
+        color: #fff;
         margin: 5px 0 0 0;
         font-weight: 500;
+        z-index: 11;
+        text-shadow: 0px 0px 7px rgba(255, 255, 255, 1),1.5px 2px 0 #222;
+      }
+
+      #none {
+        position: absolute;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+      }
+      #display-name {
+        position: relative;
       }
 
       svg {
@@ -140,12 +152,23 @@
       .rank-value {
         font-size: 28px;
         font-weight: 900;
-        fill: #d00;
-        text-shadow: 1px 1px 0px white;
+        fill: #000;
       }
       #stat-polygon {
         fill-opacity: 0.35;
         stroke-width: 3;
+      }
+
+      .the222 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .show {
+        display: flex;
+       justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -153,80 +176,80 @@
     <div class="container" id="main-container">
       <div class="stand-info">
         <h1 class="sub-text">[STAND NAME]</h1>
-        <div id="display-stand-name">STAND NAME</div>
+        <div id="display-stand-name">Good Boy</div>
       </div>
 
       <div class="stand-image-wrapper" id="image-wrapper">
-        <img id="stand-photo" src="" alt="" />
+        <img id="stand-photo" src="https://i.ibb.co/bgBPGq1j/30080-removebg-preview.png" alt="" />
       </div>
-
+      
       <svg viewBox="0 0 550 550">
         <g transform="translate(275, 275)">
           <circle
-            cx="0"
-            cy="0"
-            r="270"
-            fill="none"
-            stroke="#000"
-            stroke-width="3"
+          cx="0"
+          cy="0"
+          r="270"
+          fill="none"
+          stroke="#000"
+          stroke-width="3"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="180"
-            fill="none"
-            stroke="black"
-            stroke-width="2"
+          cx="0"
+          cy="0"
+          r="180"
+          fill="none"
+          stroke="black"
+          stroke-width="2"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="144"
-            fill="none"
-            stroke="#555"
-            stroke-width="1"
+          cx="0"
+          cy="0"
+          r="144"
+          fill="none"
+          stroke="#555"
+          stroke-width="0.5"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="120"
-            fill="none"
-            stroke="#555"
-            stroke-width="1"
+          cx="0"
+          cy="0"
+          r="120"
+          fill="none"
+          stroke="#555"
+          stroke-width="0.5"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="96"
-            fill="none"
-            stroke="#555"
-            stroke-width="1"
+          cx="0"
+          cy="0"
+          r="96"
+          fill="none"
+          stroke="#555"
+          stroke-width="0.5"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="96"
-            fill="none"
-            stroke="#555"
-            stroke-width="1"
+          cx="0"
+          cy="0"
+          r="96"
+          fill="none"
+          stroke="#555"
+          stroke-width="0.1"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="72"
-            fill="none"
-            stroke="#555"
-            stroke-width="1"
+          cx="0"
+          cy="0"
+          r="72"
+          fill="none"
+          stroke="#555"
+          stroke-width="0.5"
           />
           <circle
-            cx="0"
-            cy="0"
-            r="48"
-            fill="none"
-            stroke="#555"
-            stroke-width="1"
+          cx="0"
+          cy="0"
+          r="48"
+          fill="none"
+          stroke="#555"
+          stroke-width="0.5"
           />
-          <g stroke="black" stroke-width="1" opacity="0.2">
+          <g stroke="black" stroke-width="2" opacity="1">
             <line x1="0" y1="0" x2="0" y2="-180" />
             <line x1="0" y1="0" x2="155.8" y2="-90" />
             <line x1="0" y1="0" x2="155.8" y2="90" />
@@ -238,107 +261,113 @@
             破壞力
           </text>
           <text
-            x="207.8"
-            y="-120"
-            text-anchor="middle"
-            class="label-text"
-            transform="rotate(60, 207.8, -120)"
+          x="207.8"
+          y="-120"
+          text-anchor="middle"
+          class="label-text"
+          transform="rotate(60, 207.8, -120)"
           >
-            速度
-          </text>
-          <text
+          速度
+        </text>
+        <text
             x="-207.8"
             y="-120"
             text-anchor="middle"
             class="label-text"
             transform="rotate(300, -207.8, -120)"
-          >
+            >
             成長性
           </text>
           <text
-            x="207.8"
-            y="120"
-            text-anchor="middle"
-            class="label-text"
-            transform="rotate(300, 207.8, 120)"
+          x="207.8"
+          y="120"
+          text-anchor="middle"
+          class="label-text"
+          transform="rotate(300, 207.8, 120)"
           >
-            射程距離
-          </text>
-          <text x="0" y="240" text-anchor="middle" class="label-text">
-            持續力
-          </text>
-          <text
-            x="-207.8"
-            y="120"
-            text-anchor="middle"
-            class="label-text"
-            transform="rotate(60, -207.8, 120)"
-          >
-            精密度
-          </text>
-          <polygon id="stat-polygon" points="0,0 0,0 0,0 0,0 0,0 0,0" />
-          <text
-            x="0"
-            y="-210"
-            text-anchor="middle"
-            class="rank-value display-rank"
-          >
-            C
-          </text>
-          <text
-            x="181.8"
-            y="-105"
-            text-anchor="middle"
-            class="rank-value display-rank"
-          >
-            C
-          </text>
-          <text
-            x="181.8"
-            y="105"
-            text-anchor="middle"
-            class="rank-value display-rank"
-          >
-            C
-          </text>
-          <text
-            x="0"
-            y="210"
-            text-anchor="middle"
-            class="rank-value display-rank"
-          >
-            C
-          </text>
-          <text
-            x="-181.8"
-            y="105"
-            text-anchor="middle"
-            class="rank-value display-rank"
-          >
-            C
-          </text>
-          <text
-            x="-181.8"
-            y="-105"
-            text-anchor="middle"
-            class="rank-value display-rank"
-          >
-            C
-          </text>
-        </g>
-      </svg>
-    </div>
+          射程距離
+        </text>
+        <text x="0" y="240" text-anchor="middle" class="label-text">
+          持續力
+        </text>
+        <text
+        x="-207.8"
+        y="120"
+        text-anchor="middle"
+        class="label-text"
+        transform="rotate(60, -207.8, 120)"
+        >
+        精密度
+      </text>
+      <polygon id="stat-polygon" points="0,0 0,0 0,0 0,0 0,0 0,0" />
+      <text
+      x="0"
+      y="-210"
+      text-anchor="middle"
+      class="rank-value display-rank"
+      >
+      C
+    </text>
+    <text
+    x="181.8"
+    y="-105"
+    text-anchor="middle"
+    class="rank-value display-rank"
+    >
+    C
+    </text>
+    <text
+    x="181.8"
+    y="105"
+    text-anchor="middle"
+    class="rank-value display-rank"
+    >
+    C
+    </text>
+    <text
+    x="0"
+    y="210"
+    text-anchor="middle"
+    class="rank-value display-rank"
+    >
+    C
+    </text>
+    <text
+    x="-181.8"
+    y="105"
+    text-anchor="middle"
+    class="rank-value display-rank"
+    >
+    C
+  </text>
+  <text
+  x="-181.8"
+  y="-105"
+  text-anchor="middle"
+  class="rank-value display-rank"
+  >
+  C
+</text>
+</g>
+</svg>
+  <div id="none">
+    <div></div>
+    <div id="display-name">Good Boy</div>
+  </div>
+</div>
 
-    <div class="controls" id="controls-container">
-      <div class="field" style="grid-column: span 3">
+<div class="controls" id="controls-container">
+  <div class="field" style="grid-column: span 3">
+      <div class="the222">
         <label>替身名稱 (STAND NAME)</label>
-        <input type="text" id="input-stand-name" value="STAND NAME" />
+        <input type="text" id="input-stand-name" value="Good Boy" />
+        <label>替身名稱 (STAND NAME)</label>
+        <input type="text" id="input-name" value="Good Boy" />
       </div>
+    <div>
       <div class="field">
         <label>上傳替身本體</label>
         <input type="file" id="input-stand-image" accept="image/*" />
-      </div>
-      <div class="field">
         <label>上載背景圖片</label>
         <input type="file" id="input-bg-image" accept="image/*" />
       </div>
@@ -360,18 +389,19 @@
       ];
       const possibleRanks = ['A', 'B', 'C', 'D', 'E', '∞', '?'];
 
-      containerUI.innerHTML += `<div class="field"><label>陰影顏色</label><input type="color" id="shadow-color" value="#ffaa00"></div>`;
+      
       statsArr.forEach((name, i) => {
         containerUI.innerHTML += `
           <div class="field">
             <label>${name}</label>
             <select class="stat-input" data-index="${i}">
-              <option value="180">∞</option><option value="144">A</option><option value="120">B</option>
-              <option value="96" selected>C</option><option value="72">D</option><option value="48">E</option>
+              <option value="180" selected>∞</option><option value="144">A</option><option value="120">B</option>
+              <option value="96">C</option><option value="72">D</option><option value="48">E</option>
               <option value="0">?</option>
             </select>
           </div>`;
       });
+      containerUI.innerHTML += `<div class="field show"><label>陰影顏色</label><input type="color" id="shadow-color" value="#ffaa00"></div>`;
 
       const mainContainer = document.getElementById('main-container');
       const inputs = document.querySelectorAll('.stat-input');
@@ -380,6 +410,8 @@
       const colorPicker = document.getElementById('shadow-color');
       const nameInput = document.getElementById('input-stand-name');
       const nameDisplay = document.getElementById('display-stand-name');
+      const nameStandInput = document.getElementById('input-name');
+      const nameStandDisplay = document.getElementById('display-name');
       const imageInput = document.getElementById('input-stand-image');
       const bgInput = document.getElementById('input-bg-image');
       const imageWrapper = document.getElementById('image-wrapper');
@@ -423,7 +455,11 @@
       });
 
       nameInput.addEventListener('input', () => {
-        nameDisplay.textContent = nameInput.value || 'STAND NAME';
+        nameDisplay.textContent = nameInput.value || 'Good Boy';
+      });
+
+      nameStandInput.addEventListener('input', () => {
+        nameStandDisplay.textContent = nameStandInput.value || 'Good Boy';
       });
 
       function updatePolygonStyle() {
@@ -474,13 +510,13 @@
           if (elapsed >= duration) {
             element.textContent = finalValue;
             element.style.opacity = '1';
-            element.style.fill = '#d00';
+            element.style.fill = '#000';
             clearInterval(timer);
           } else {
             element.textContent =
               possibleRanks[Math.floor(Math.random() * possibleRanks.length)];
             element.style.opacity = '0.6';
-            element.style.fill = '#666';
+            element.style.fill = '#000';
           }
         }, 70);
         element.dataset.timer = timer;
