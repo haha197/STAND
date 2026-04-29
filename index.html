@@ -83,7 +83,7 @@
         text-shadow: 0px 0px 7px rgba(255, 255, 255, 1),1.5px 2px 0 #222; /* 增加可讀性 */
       }
       .sub-text {
-        font-size: 2vw;
+        font-size: 1vw;
         font-weight: 900;
         letter-spacing: 2px;
         color: #fff;
@@ -98,15 +98,26 @@
         z-index: 11;
         text-shadow: 0px 0px 7px rgba(255, 255, 255, 1),1.5px 2px 0 #222;
       }
-
+      
       #none {
         position: absolute;
         width:100vw;
         display: flex;
         justify-content: center;
       }
-      #display-name {
+      #display-name,#user-name {
+        color: #fff;
         position: relative;
+        z-index: 10;
+        text-shadow: 0px 0px 7px rgba(255, 255, 255, 1),1.5px 2px 0 #222;
+      }
+      #user-name {
+        font-size: 1vw;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: -2vh;
       }
 
       svg {
@@ -164,13 +175,13 @@
         flex-direction: column;
         gap: 5px;
       }
-
+      
       .show {
         display: flex;
-       justify-content: center;
+        justify-content: center;
         align-items: center;
       }
-    </style>
+      </style>
   </head>
   <body>
     <div class="container" id="main-container">
@@ -178,77 +189,24 @@
         <h1 class="sub-text">[STAND NAME]</h1>
         <div id="display-stand-name">Good Boy</div>
       </div>
-
+      <div id="none">
+        <h1 id="user-name">[STAND USER NAME]</h1>
+        <div id="display-name">Night Cheung</div>
+      </div>
       <div class="stand-image-wrapper" id="image-wrapper">
         <img id="stand-photo" src="https://i.ibb.co/bgBPGq1j/30080-removebg-preview.png" alt="" />
       </div>
       
       <svg viewBox="0 0 550 550">
         <g transform="translate(275, 275)">
-          <circle
-          cx="0"
-          cy="0"
-          r="270"
-          fill="none"
-          stroke="#000"
-          stroke-width="3"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="180"
-          fill="none"
-          stroke="black"
-          stroke-width="2"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="144"
-          fill="none"
-          stroke="#555"
-          stroke-width="0.5"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="120"
-          fill="none"
-          stroke="#555"
-          stroke-width="0.5"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="96"
-          fill="none"
-          stroke="#555"
-          stroke-width="0.5"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="96"
-          fill="none"
-          stroke="#555"
-          stroke-width="0.1"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="72"
-          fill="none"
-          stroke="#555"
-          stroke-width="0.5"
-          />
-          <circle
-          cx="0"
-          cy="0"
-          r="48"
-          fill="none"
-          stroke="#555"
-          stroke-width="0.5"
-          />
+          <circle cx="0" cy="0" r="270" fill="none" stroke="#000" stroke-width="3" />
+          <circle cx="0" cy="0" r="180" fill="none" stroke="black" stroke-width="2" />
+          <circle cx="0" cy="0" r="144" fill="none" stroke="#555" stroke-width="0.5" />
+          <circle cx="0" cy="0" r="120" fill="none" stroke="#555" stroke-width="0.5" />
+          <circle cx="0" cy="0" r="96" fill="none" stroke="#555" stroke-width="0.5" />
+          <circle cx="0" cy="0" r="96" fill="none" stroke="#555" stroke-width="0.1" />
+          <circle cx="0" cy="0" r="72" fill="none" stroke="#555" stroke-width="0.5"/>
+          <circle cx="0" cy="0" r="48" fill="none" stroke="#555" stroke-width="0.5"/>
           <g stroke="black" stroke-width="2" opacity="1">
             <line x1="0" y1="0" x2="0" y2="-180" />
             <line x1="0" y1="0" x2="155.8" y2="-90" />
@@ -257,122 +215,38 @@
             <line x1="0" y1="0" x2="-155.8" y2="90" />
             <line x1="0" y1="0" x2="-155.8" y2="-90" />
           </g>
-          <text x="0" y="-240" text-anchor="middle" class="label-text">
-            破壞力
-          </text>
-          <text
-          x="207.8"
-          y="-120"
-          text-anchor="middle"
-          class="label-text"
-          transform="rotate(60, 207.8, -120)"
-          >
-          速度
-        </text>
-        <text
-            x="-207.8"
-            y="-120"
-            text-anchor="middle"
-            class="label-text"
-            transform="rotate(300, -207.8, -120)"
-            >
-            成長性
-          </text>
-          <text
-          x="207.8"
-          y="120"
-          text-anchor="middle"
-          class="label-text"
-          transform="rotate(300, 207.8, 120)"
-          >
-          射程距離
-        </text>
-        <text x="0" y="240" text-anchor="middle" class="label-text">
-          持續力
-        </text>
-        <text
-        x="-207.8"
-        y="120"
-        text-anchor="middle"
-        class="label-text"
-        transform="rotate(60, -207.8, 120)"
-        >
-        精密度
-      </text>
-      <polygon id="stat-polygon" points="0,0 0,0 0,0 0,0 0,0 0,0" />
-      <text
-      x="0"
-      y="-210"
-      text-anchor="middle"
-      class="rank-value display-rank"
-      >
-      C
-    </text>
-    <text
-    x="181.8"
-    y="-105"
-    text-anchor="middle"
-    class="rank-value display-rank"
-    >
-    C
-    </text>
-    <text
-    x="181.8"
-    y="105"
-    text-anchor="middle"
-    class="rank-value display-rank"
-    >
-    C
-    </text>
-    <text
-    x="0"
-    y="210"
-    text-anchor="middle"
-    class="rank-value display-rank"
-    >
-    C
-    </text>
-    <text
-    x="-181.8"
-    y="105"
-    text-anchor="middle"
-    class="rank-value display-rank"
-    >
-    C
-  </text>
-  <text
-  x="-181.8"
-  y="-105"
-  text-anchor="middle"
-  class="rank-value display-rank"
-  >
-  C
-</text>
-</g>
-</svg>
-  <div id="none">
-    <div></div>
-    <div id="display-name">Good Boy</div>
-  </div>
-</div>
-
-<div class="controls" id="controls-container">
-  <div class="field" style="grid-column: span 3">
-      <div class="the222">
-        <label>替身名稱 (STAND NAME)</label>
-        <input type="text" id="input-stand-name" value="Good Boy" />
-        <label>替身名稱 (STAND NAME)</label>
-        <input type="text" id="input-name" value="Good Boy" />
-      </div>
-    <div>
-      <div class="field">
-        <label>上傳替身本體</label>
-        <input type="file" id="input-stand-image" accept="image/*" />
-        <label>上載背景圖片</label>
-        <input type="file" id="input-bg-image" accept="image/*" />
+          <text x="0" y="-240" text-anchor="middle" class="label-text">破壞力</text>
+          <text x="207.8" y="-120" text-anchor="middle" class="label-text" transform="rotate(60, 207.8, -120)" > 速度</text>
+          <text x="-207.8" y="-120" text-anchor="middle" class="label-text" transform="rotate(300, -207.8, -120)" >成長性</text>
+          <text x="207.8" y="120" text-anchor="middle" class="label-text" transform="rotate(300, 207.8, 120)" >射程距離</text>
+          <text x="0" y="240" text-anchor="middle" class="label-text">持續力</text>
+          <text x="-207.8" y="120" text-anchor="middle" class="label-text" transform="rotate(60, -207.8, 120)" >精密度</text>
+          <polygon id="stat-polygon" points="0,0 0,0 0,0 0,0 0,0 0,0" />
+          <text x="0" y="-210" text-anchor="middle" class="rank-value display-rank">C</text>
+          <text x="181.8" y="-105" text-anchor="middle" class="rank-value display-rank">C</text>
+          <text x="181.8" y="105" text-anchor="middle" class="rank-value display-rank">C</text>
+          <text x="0" y="210" text-anchor="middle" class="rank-value display-rank">C</text>
+          <text x="-181.8" y="105" text-anchor="middle" class="rank-value display-rank" >C</text>
+          <text x="-181.8" y="-105" text-anchor="middle" class="rank-value display-rank" > C</text>
+        </g>
+      </svg>
+    </div>
+    <div class="controls" id="controls-container">
+      <div class="field" style="grid-column: span 3">
+        <div class="the222">
+          <label>替身名稱 (STAND NAME)</label>
+          <input type="text" id="input-stand-name" value="Good Boy" />
+          <label>替身使者名稱 (STAND USER NAME)</label>
+          <input type="text" id="input-name" value="Night Cheung" />
+        </div>
+        <div class="field">
+          <label>上傳替身本體</label>
+          <input type="file" id="input-stand-image" accept="image/*" />
+          <label>上載背景圖片</label>
+          <input type="file" id="input-bg-image" accept="image/*" />
+        </div>
       </div>
     </div>
-
     <script>
       // 這裡放入你提供的紅黃漸變圖作為預設值 (簡化為Base64或外部連結)
       const defaultBg =
@@ -459,7 +333,7 @@
       });
 
       nameStandInput.addEventListener('input', () => {
-        nameStandDisplay.textContent = nameStandInput.value || 'Good Boy';
+        nameStandDisplay.textContent = nameStandInput.value || 'Night';
       });
 
       function updatePolygonStyle() {
